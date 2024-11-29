@@ -6,7 +6,7 @@
     <title>ES TU VIAJE</title>
 <style>
         body {
-            background-color: #008000; /* Verde clásico */
+            background-color: #FDF2E9; /* BEIGE */
             font-family: Arial, sans-serif;
             margin: 0;
             display: flex;
