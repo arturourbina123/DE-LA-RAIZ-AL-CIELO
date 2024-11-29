@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ES TU VIAJE</title>
+<style>
+        body {
+            background-color: #008000; /* Verde clásico */
+            color: white; /* Texto blanco para mejor contraste */
+        }
+    </style>
 </head>
 <body>
     <h1>EST TU VIAJE</h1>
