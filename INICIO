@@ -7,13 +7,26 @@
 <style>
         body {
             background-color: #008000; /* Verde clásico */
-            color: white; /* Texto blanco para mejor contraste */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        img {
+            max-width: 80%;
+            height: auto;
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
     <h1>EST TU VIAJE</h1>
     <p>¡Bienvenido a tu próxima aventura! Aquí encontrarás todo lo que necesitas para planificar tu viaje ideal.</p>
+    <img src="imagen_luciernas1.jpg" alt="Luciérnagas iluminando el bosque">
+    <img src="imagen_bosque_nanacamilpa.jpg" alt="Paisaje del bosque en Nanacamilpa">
     <p>DE LA RAIZ AL CIELO<P>
     <p> Ven y conoce el santuario de las luciernagas de nanacamilpa<p>
     </body>
