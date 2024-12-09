@@ -1,0 +1,247 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Estilos del header */
+header {
+    background-color: white;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Estilos del logo */
+/* Ajuste del tamaño del logo */
+.logo {
+    max-height: 50px; /* Restricción de la altura máxima */
+    max-width: 100px; /* Restricción opcional del ancho */
+    object-fit: contain; /* Asegura que mantenga proporciones */
+}
+
+
+/* Estilos del nombre de la página */
+.nombre-pagina {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #1B2020;
+}
+
+/* Separador vertical */
+.separator {
+    width: 1px;
+    height: 40px;
+    background-color: #1B2020;
+    margin: 0 15px;
+}
+
+/* Estilos del menú */
+.navbar-nav .nav-link {
+    color: #1B2020 !important;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #1B2020;
+    text-decoration: underline;
+}
+
+.contenedor, .contenedor-fluid {
+    width: 100%; /* Usar todo el ancho disponible */
+    max-width: 10rem; /* Ancho máximo ajustado */
+    padding: 0 1rem; /* Espaciado interno lateral */
+    margin: 0 auto; /* Centrado horizontal */
+}
+
+
+
+/* Sección de introducción */
+.introduccion {
+    text-align: center;
+    margin: 4rem 0;
+}
+
+/* Estilos del título */
+.introduccion h1 {
+    font-size: 3rem; /* Tamaño del título */
+    font-weight: 600; /* Mayor énfasis */
+    color: #1B2020; /* Consistencia con el header */
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Estilos del texto */
+.introduccion p {
+    font-size: 1rem; /* Tamaño del texto */
+    line-height: 1.8;
+    color: #333; /* Texto más suave para buena lectura */
+    margin: 0 auto;
+    max-width: 70rem; /* Limitar ancho para mejor legibilidad */
+    font-weight: 400; /* Ligero para equilibrio con el título */
+    text-align: justify; /* Mejor alineación en texto largo */
+}
+
+/* Estilos para la sección "Nuestro Nombre" */
+.nuestro-nombre {
+    background-color: #096D6B;
+    padding: 2rem 1rem;
+    color: white;
+    text-align: center;
+    border-radius: 2rem; /* Bordes redondeados */
+    margin: 2rem auto; /* Centrar y ajustar márgenes verticales */
+}
+
+/* Título de la sección */
+.nuestro-nombre h1 {
+    font-size: 3rem; /* Tamaño grande del título */
+    font-weight: 600; /* Énfasis */
+    margin-bottom: 2rem; /* Separación con el párrafo */
+}
+
+/* Texto descriptivo */
+.nuestro-nombre p {
+    font-size: 1rem; /* Tamaño de texto consistente */
+    line-height: 1.8; /* Espaciado entre líneas */
+    max-width: 100rem; /* Ancho limitado para legibilidad */
+    margin: 0 auto; /* Centrar el texto */
+    text-align: justify; /* Alineación justificada */
+    font-weight: 400; /* Peso normal */
+}
+
+/* Estilos para la sección "Nuestra identidad" */
+.nuestra-identidad {
+    background-color: #615e30;
+    padding: 3rem 2rem;
+    color: white;
+    text-align: center;
+    border-radius: 2rem;
+    margin: 2rem auto;
+}
+
+/* Título de la sección */
+.nuestra-identidad h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Subtítulo debajo del título */
+.nuestra-identidad h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+/* Contenedor principal para dividir imagen y texto */
+.contenedor-identidad {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    max-width: 100rem;
+    margin: 0 auto;
+}
+
+/* Contenedor de imagen */
+.identidad-imagen img {
+    width: 100%;
+    max-width: 45rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Contenedor de la paleta de colores y texto */
+.identidad-paleta {
+    max-width: 50%;
+    text-align: center;
+}
+
+/* Paleta de colores */
+.paleta-colores {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+/* Estilos de los cuadrados de color */
+.color {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.color-cuadro {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px; /* Bordes redondeados */
+    margin-bottom: 0.5rem;
+    box-shadow: 4px 4px 4px 4px rgba(255, 255, 255, 255);
+}
+
+/* Texto debajo de cada color */
+.color p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #fff;
+    margin: 0;
+}
+
+/* Descripción de la paleta de colores */
+.descripcion-paleta {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #fff;
+    margin-top: 2rem;
+    text-align: justify;
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #1B2020;
+    color: white;
+}
+
+/* Contenedor del footer */
+.footer-content {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+/* Alineación de los elementos en el footer */
+footer p, .contacto {
+    font-size: 1rem;
+}
+
+.contacto {
+    display: flex;
+    align-items: center;
+}
+
+/* Espaciado entre los íconos y el texto */
+.contacto a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.contacto img.social-icon {
+    width: 30px; /* Ajusta el tamaño del ícono */
+    height: auto;
+    margin-right: 0.5rem; /* Espacio entre el ícono y el texto */
+}
+
+/* Cambio de color al pasar el mouse por encima */
+.contacto a:hover {
+    color: #C09F23; /* Color dorado al pasar el mouse */
+}
+
+/* Espaciado entre el texto de contacto */
+.contacto span {
+    font-size: 1rem;
+}
