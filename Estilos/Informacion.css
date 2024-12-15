@@ -1,8 +1,10 @@
 /* Estilos generales */
 body {
     margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
 }
+
 
 /* Estilos del header */
 header {
@@ -10,17 +12,44 @@ header {
     border-bottom: 1px solid #ccc;
 }
 
+/* Estilos del logo */
+/* Ajuste del tamaño del logo */
 .logo {
-    max-height: 50px;
-    max-width: 100px;
-    object-fit: contain;
+    max-height: 50px; /* Restricción de la altura máxima */
+    max-width: 100px; /* Restricción opcional del ancho */
+    object-fit: contain; /* Asegura que mantenga proporciones */
 }
 
+
+/* Estilos del nombre de la página */
 .nombre-pagina {
     font-size: 1.2rem;
     font-weight: bold;
     color: #1B2020;
 }
+
+/* Separador vertical */
+.separator {
+    width: 1px;
+    height: 40px;
+    background-color: #1B2020;
+    margin: 0 15px;
+}
+
+/* Estilos del menú */
+.navbar-nav .nav-link {
+    color: #1B2020 !important;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #1B2020;
+    text-decoration: underline;
+}
+
+
+
+
 
 /* Sección de introducción */
 .introduccion {
@@ -48,14 +77,133 @@ header {
 
 /* Imagen más grande y centrada */
 .img-fluid {
-    width: 90%;  /* Ajusta el porcentaje según el tamaño deseado */
-    max-width: 900px;  /* Puedes aumentar este valor si quieres que se vea más grande */
+    width: 90%;  
+    max-width: 900px;
     height: auto;
-    margin-top: 2rem;  /* Ajuste superior */
-    display: block;  /* Necesario para que el margin auto funcione */
+    margin-top: 2rem;
+    display: block;
     margin-left: auto;
-    margin-right: auto;  /* Centra la imagen en el contenedor */
+    margin-right: auto;
 }
+
+/* Estilos para la sección del carrusel */
+/* General */
+.carousel-container h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #1B2020;
+    margin-bottom: 2rem;
+}
+
+.carousel-container {
+    text-align: center;
+    margin: 4rem 0;
+}
+
+.carousel {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.carousel-inner {
+    position: relative; /* Asegura el posicionamiento de los elementos */
+    overflow: hidden;   /* Oculta los elementos no activos */
+}
+
+.carousel-item {
+    display: none; /* Oculta por defecto los elementos */
+    position: relative;
+    width: 100%; /* Asegura que ocupe todo el contenedor */
+    transition: opacity 0.3s ease-in-out; /* Transición suave */
+}
+
+.carousel-item.active {
+    opacity: 1; /* Muestra solo el activo */
+    transform: translateX(0); /* Posiciona el elemento activo en su lugar */
+}
+
+.carousel-item-next, .carousel-item-prev {
+    opacity: 1;
+    transform: translateX(100%); /* Elemento siguiente desplazado hacia la derecha */
+}
+
+
+.carousel-content {
+    background-color: rgba(27, 32, 32, 0.85); /* Fondo con opacidad */
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+/* Estilos generales para la nueva sección */
+.why-choose {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.why-choose h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #1B2020;
+    margin-bottom: 2rem;
+}
+
+.why-choose .container {
+    display: flex;
+    flex-direction: column; /* Coloca los contenedores en columna inicialmente */
+    gap: 1rem; /* Espacio entre los contenedores */
+    align-items: center;
+}
+
+.why-choose .content-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.why-choose .content-container:nth-child(odd) {
+    flex-direction: row; /* Imagen a la izquierda, texto a la derecha */
+}
+
+.why-choose .content-container:nth-child(even) {
+    flex-direction: row-reverse; /* Texto a la izquierda, imagen a la derecha */
+}
+
+.why-choose .content-container img {
+    width: 48%; /* Asegura que las imágenes tengan el mismo ancho */
+    height: auto;
+    object-fit: cover;
+    margin-right: 1rem; /* Asegura un pequeño margen entre la imagen y el texto */
+}
+
+.why-choose .content-container .text {
+    width: 48%;  /* El texto tiene un ancho fijo */
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .why-choose .content-container {
+        flex-direction: column;  /* Para pantallas pequeñas, las imágenes y el texto estarán uno encima del otro */
+        text-align: center;
+    }
+
+    .why-choose .content-container img {
+        width: 80%;  /* Las imágenes ocuparán el 80% en móviles */
+    }
+
+    .why-choose .content-container .text {
+        width: 80%;  /* El texto ocupará el 80% en móviles */
+    }
+}
+
 
 
 /* Estilos para el footer */
@@ -80,7 +228,6 @@ footer p, .contacto {
     align-items: center;
 }
 
-/* Espaciado entre los íconos y el texto */
 .contacto a {
     color: white;
     text-decoration: none;
@@ -90,17 +237,15 @@ footer p, .contacto {
 }
 
 .contacto img.social-icon {
-    width: 30px; /* Ajusta el tamaño del ícono */
+    width: 30px;
     height: auto;
-    margin-right: 0.5rem; /* Espacio entre el ícono y el texto */
+    margin-right: 0.5rem;
 }
 
-/* Cambio de color al pasar el mouse por encima */
 .contacto a:hover {
-    color: #C09F23; /* Color dorado al pasar el mouse */
+    color: #C09F23;
 }
 
-/* Espaciado entre el texto de contacto */
 .contacto span {
     font-size: 1rem;
 }
