@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De la raíz al cielo</title>
+    <!-- Enlace a Bootstrap CSS -->
+    <link href="bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Enlace al archivo CSS correcto -->
+    <link rel="stylesheet" href="/Estilos/Itinerario.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid"> <!-- Cambié container por container-fluid -->
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="Recursos/LOGO.jpeg" alt="Logo" class="logo img-fluid">
+                    <span class="ms-2 nombre-pagina">De la raíz al cielo</span>
+                </a>            
+                <div class="separator"></div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="Index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Informacion.html">Informacion general</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Itinerario.html">Itinerario</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Servicios</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+<main class="container-fluid">
+       
+    <section class="introduccion">
+        <h1>¡Descubre la Ruta al Santuario de las Luciérnagas!</h1>
+
+    <!-- Mapa de Google Maps con la ruta -->
+    <div id="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!4v1734969998415!6m8!1m7!1sAD8p0OFItX5wlSYy5iNo9w!2m2!1d19.46729728753263!2d-98.57043919421365!3f157.79529!4f0!5f0.7820865974627469" width="1400" height="800" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- Descripción debajo del mapa -->
+    <div class="description">
+        <p>Traslado redondo estación de metro 18 de marzo (Ciudad de México) - Santuario de las luciérnagas (Nanacamilpa, Tlaxcala).</p>
+    </div>
+    </section>
+
+    <section class="introduccion">
+        <h1>¿Que tenemos preparado para ti?</h1>
+        <h2>¡Sumérgete en una experiencia única y mágica con nuestro itinerario especial para la temporada de luciérnagas! 🌟</h2>
+        
+        <div class="info-container">
+            <p>
+                Cada sábado a las 12:00 pm, embárcate en una aventura inolvidable que te llevará a través del Santuario de las Luciérnagas en Nanacamilpa, Tlaxcala. Durante esta travesía, serás testigo del espectacular brillo de millones de luciérnagas, una maravilla natural que solo se puede observar de mediados de junio a mediados de agosto.
+            </p>
+            <p>
+                Descubre la magia de la naturaleza en su máximo esplendor, con recorridos guiados que te contarán todo sobre estos fascinantes escarabajos, mientras disfrutas de paisajes exuberantes y de la serenidad de la noche.
+            </p>
+            <p>
+                Termina tu viaje el domingo a las 8:00 pm, sintiéndote renovado y asombrado por la belleza de un mundo que brilla en la oscuridad.
+            </p>
+        </div>
+        
+        <h3>¡No te pierdas esta oportunidad de vivir una experiencia que te dejará sin aliento y con recuerdos imborrables! 🌌✨</h3>
+    </section>
+    
+    <section class="duracion">
+        <h2>Duración</h2>
+    
+        <!-- Texto con punto antes de la descripción -->
+        <div class="descripcion-duracion p">
+            <p><span class="punto">•</span> La ruta tiene una duración de dos días y una noche planeada para realizarse los fines de semana (de sábado a domingo) con actividades durante la tarde-noche del sábado y actividades durante la mañana y tarde del domingo.</p>
+        </div>
+
+        <div class="descripcion-duracion p">
+            <p><span class="punto">•</span> Las fechas establecidas son las siguientes:</p>
+        </div>
+    
+        <!-- Contenedor de las tarjetas de fechas -->
+        <div class="fechas-container">
+            <div class="fecha-card">21-22 de junio del 2025</div>
+            <div class="fecha-card">28-29 de junio del 2025</div>
+            <div class="fecha-card">5-6 de julio del 2025</div>
+            <div class="fecha-card">12-13 de julio del 2025</div>
+            <div class="fecha-card">19-20 de julio del 2025</div>
+            <div class="fecha-card">26-27 de julio del 2025</div>
+            <div class="fecha-card">2-3 de agosto del 2025</div>
+            <div class="fecha-card">9-10 de agosto del 2025</div>
+        </div>
+    
+        <!-- Texto adicional debajo de las fechas -->
+        <div class="descripcion-duracion p">
+            <p><span class="punto">•</span> La temporalidad para esta ruta es solamente los meses de junio-agosto, ya que se requiere 
+                que comience la temporada de lluvias en Nanacamilpa para poder observar el espectáculo de las luciérnagas. </p>
+        </div>
+    </section>
+    
+    <section class="itinerario">
+        <h2>Itinerario detallado</h2>
+        <div class="itinerario-container">
+            <!-- Contenedor para Sábado -->
+            <div class="dia sabado">
+                <h3>Sábado</h3>
+                <div class="actividad">
+                    <img src="/Recursos/metro.png" alt="Salida CDMX">
+                    <p>Salida a las 12 am de CDMX desde punto de encuentro con dirección Centro Nanacamilpa, Tlaxcala.</p>
+                </div>
+                <div class="actividad">
+                    <img src="/Recursos/restaurante.jpg" alt="Comida en restaurante">
+                    <p>Llegada al Centro aproximadamente a las 2 pm para baño y comida en restaurante Tequexquite.</p>
+                </div>
+                <div class="actividad">
+                    <img src="/Recursos/centro.jpg" alt="Recorrido libre">
+                    <p>Recorrido libre en el Centro de Nanacamilpa.</p>
+                </div>
+                <div class="actividad">
+                    <img src="/Recursos/glamping.avif" alt="Recorrido libre">
+                    <p>Traslado a las 5 pm del Centro Nanacamilpa al lugar de hospedaje (glamping).</p>
+                </div>
+                <div class="actividad">
+                    <img src="/Recursos/recorrido.webp" alt="Recorrido libre">
+                    <p>Tiempo libre para recorrer el lugar de hospedaje y descansar.</p>
+                </div>
+                <div class="actividad">
+                    <img src="/Recursos/santuario.jpg" alt="Recorrido libre">
+                    <p>Salida a las 6:45 pm con dirección al Santuario de las Luciérnagas para empezar
+                        con la observación de flora y fauna. Duración: aproximadamente 3 horas</p>
+                </div>
+                <div class="actividad">
+                    <img src="/Recursos/hospedaje2.jpg" alt="Recorrido libre">
+                    <p>Regreso a las 10:30 pm al lugar de hospedaje.</p>
+                </div>
+                <!-- Agrega más actividades aquí -->
+            </div>
+    
+            <!-- Contenedor para Domingo -->
+            <div class="dia domingo">
+                <h3>Domingo</h3>
+                <div class="actividad">
+                    <img src="img4.jpg" alt="Tour de hongos">
+                    <p>Tour de hongos silvestres a las 6 am con duración aproximada de 2 hrs, con desayuno incluido.</p>
+                </div>
+                <div class="actividad">
+                    <img src="img5.jpg" alt="Taller de educación ambiental">
+                    <p>Salida a las 10 am al Rancho Magueyero San Isidro donde realizaremos un taller de educación ambiental y degustación. Duración aproximada de 2 hrs.</p>
+                    
+                </div>
+                <!-- Agrega más actividades aquí -->
+            </div>
+        </div>
+    </section>
+    
+    
+    
+
+
+
+
+
+
+    <footer>
+        <div class="container-fluid py-3">
+            <div class="footer-content d-flex justify-content-between align-items-center">
+                <p class="mb-0 text-white">© Todos los derechos reservados</p>
+                <div class="contacto">
+                    <span class="text-white me-3">Contáctanos:</span>
+                    <a href="https://www.instagram.com/delaraizalcielo_?igsh=cDQ0NDc4Z2QwOHM1" target="_blank" class="text-white me-3">
+                        <img src="Recursos/instagram.png" alt="Instagram" class="social-icon"> Instagram
+                    </a>
+                    <a href="https://www.tiktok.com/@es.tu.viaje?_t=8s3YQp79EZB&_r=1" target="_blank" class="text-white">
+                        <img src="Recursos/tiktok.png" alt="TikTok" class="social-icon"> TikTok
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Enlace a Bootstrap JavaScript local -->
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
