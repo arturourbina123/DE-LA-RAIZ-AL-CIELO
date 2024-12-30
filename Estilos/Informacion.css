@@ -3,21 +3,27 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    box-sizing: border-box; /* Asegura que padding y bordes estén incluidos en el ancho */
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: inherit; /* Consistencia en todo el documento */
+}
 
 /* Estilos del header */
 header {
     background-color: white;
     border-bottom: 1px solid #ccc;
+    width: 100%;
 }
 
 /* Estilos del logo */
-/* Ajuste del tamaño del logo */
+
 .logo {
-    max-height: 50px; /* Restricción de la altura máxima */
-    max-width: 100px; /* Restricción opcional del ancho */
-    object-fit: contain; /* Asegura que mantenga proporciones */
+    max-height: 50px; /* Restricción de la altura */
+    object-fit: contain;
 }
 
 
@@ -47,6 +53,13 @@ header {
     text-decoration: underline;
 }
 
+.contenedor, .contenedor-fluid {
+    width: 100%; /* Usar todo el ancho disponible */
+    max-width: 10rem; /* Ancho máximo ajustado */
+    padding: 0 1rem; /* Espaciado interno lateral */
+    margin: 0 auto; /* Centrado horizontal */
+}
+
 
 /* Sección de introducción */
 .introduccion {
@@ -63,14 +76,15 @@ header {
 }
 
 .introduccion p {
-    font-size: 1rem;
+    font-size: 1.3rem; /* Tamaño del texto */
     line-height: 1.8;
-    color: #333;
+    color: #333; /* Texto más suave para buena lectura */
     margin: 0 auto;
-    max-width: 90rem;
-    font-weight: 400;
-    text-align: center;
+    max-width: 80rem; /* Limitar ancho para mejor legibilidad */
+    font-weight: 400; /* Ligero para equilibrio con el título */
+    text-align: center; /* Mejor alineación en texto largo */
 }
+
 
 /* Imagen más grande y centrada */
 .img-fluid {

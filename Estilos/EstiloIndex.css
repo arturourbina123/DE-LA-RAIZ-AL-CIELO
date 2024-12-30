@@ -3,21 +3,27 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    box-sizing: border-box; /* Asegura que padding y bordes estén incluidos en el ancho */
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: inherit; /* Consistencia en todo el documento */
+}
 
 /* Estilos del header */
 header {
     background-color: white;
     border-bottom: 1px solid #ccc;
+    width: 100%;
 }
 
 /* Estilos del logo */
-/* Ajuste del tamaño del logo */
+
 .logo {
-    max-height: 50px; /* Restricción de la altura máxima */
-    max-width: 100px; /* Restricción opcional del ancho */
-    object-fit: contain; /* Asegura que mantenga proporciones */
+    max-height: 50px; /* Restricción de la altura */
+    object-fit: contain;
 }
 
 
@@ -47,22 +53,15 @@ header {
     text-decoration: underline;
 }
 
-.contenedor, .contenedor-fluid {
-    width: 100%; /* Usar todo el ancho disponible */
-    max-width: 10rem; /* Ancho máximo ajustado */
-    padding: 0 1rem; /* Espaciado interno lateral */
-    margin: 0 auto; /* Centrado horizontal */
-}
 
 
 
 /* Sección de introducción */
 .introduccion {
+    margin: 3rem 0;
     text-align: center;
-    margin: 4rem 0;
 }
 
-/* Estilos del título */
 .introduccion h1 {
     font-size: 3rem; /* Tamaño del título */
     font-weight: 600; /* Mayor énfasis */
@@ -71,16 +70,79 @@ header {
     text-align: center;
 }
 
-/* Estilos del texto */
-.introduccion p {
-    font-size: 1rem; /* Tamaño del texto */
-    line-height: 1.8;
-    color: #333; /* Texto más suave para buena lectura */
-    margin: 0 auto;
-    max-width: 70rem; /* Limitar ancho para mejor legibilidad */
+.content-container {
+    display: flex;
+    gap: 2rem;
+    align-items: stretch; /* Centra verticalmente la imagen respecto al texto */
+    justify-content: space-between;
+}
+
+.text-container {
+    flex: 0 0 60%;
+    text-align: justify;
+}
+
+.text-container p {
+     /* Espaciado entre párrafos */
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: #333;
     font-weight: 400; /* Ligero para equilibrio con el título */
     text-align: justify; /* Mejor alineación en texto largo */
 }
+
+.image-container {
+    flex: 0 0 38%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+    }
+
+    .text-container, .image-container {
+        flex: 0 0 100%;
+    }
+
+    .image-container img {
+        margin-bottom: 1rem;
+    }
+}
+
+
+/* Texto adicional */
+.additional-text {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.additional-text p {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #333; /* Color más suave para resaltar el estilo */
+    line-height: 1.8;
+}
+
+
+
+/* Para reducir los márgenes laterales de todo el contenido */
+.container {
+    max-width: 90%;
+    padding: 0 1rem;
+}
+
 
 /* Estilos para la sección "Nuestro Nombre" */
 .nuestro-nombre {
@@ -88,116 +150,94 @@ header {
     padding: 2rem 1rem;
     color: white;
     text-align: center;
-    border-radius: 2rem; /* Bordes redondeados */
-    margin: 2rem auto; /* Centrar y ajustar márgenes verticales */
+    border-radius: 2rem;
+    margin: 2rem auto;
 }
 
-/* Título de la sección */
 .nuestro-nombre h1 {
-    font-size: 3rem; /* Tamaño grande del título */
-    font-weight: 600; /* Énfasis */
-    margin-bottom: 2rem; /* Separación con el párrafo */
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
 }
 
-/* Texto descriptivo */
-.nuestro-nombre p {
-    font-size: 1rem; /* Tamaño de texto consistente */
-    line-height: 1.8; /* Espaciado entre líneas */
-    max-width: 100rem; /* Ancho limitado para legibilidad */
-    margin: 0 auto; /* Centrar el texto */
-    text-align: justify; /* Alineación justificada */
-    font-weight: 400; /* Peso normal */
+.content-container2 {
+    display: flex;
+    align-items: stretch; /* Asegura alturas iguales */
+    gap: 0rem;
+    justify-content: space-between;
 }
 
-/* Estilos para la sección "Nuestra identidad" */
+.image-container2 {
+    flex: 0 0 18%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.image-container2 img {
+    max-width: 80%;
+    height: auto; /* Mantiene proporción */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    object-fit: cover; /* Asegura que la imagen no se deforme */
+    max-height: 500px; /* Limita el alto máximo */
+    object-fit: cover;
+}
+
+.text-container2 {
+    flex: 0 0 83%;
+    text-align: justify;
+}
+
+.text-container2 p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin: 4.5rem;
+}
+
+
+
+/* Estilos para la sección "Nuestra Identidad" */
 .nuestra-identidad {
     background-color: #615e30;
-    padding: 3rem 2rem;
+    padding: 2rem 1rem;
     color: white;
     text-align: center;
     border-radius: 2rem;
     margin: 2rem auto;
 }
 
-/* Título de la sección */
 .nuestra-identidad h1 {
     font-size: 3rem;
     font-weight: 600;
-    margin-bottom: 1rem;
-}
-
-/* Subtítulo debajo del título */
-.nuestra-identidad h2 {
-    font-size: 2rem;
-    font-weight: 400;
     margin-bottom: 2rem;
+}
+
+.image-container3 {
+    margin-bottom: 2rem; /* Espaciado entre la imagen y el texto */
+}
+
+.image-container3 img {
+    max-width: 60%;
+    height: auto; /* Mantiene las proporciones */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.text-container3 p {
+    font-size: 1.5rem;
+    line-height: 1..5;
+    margin: 2rem auto;
+}
+
+.text-container3 .italic-quote {
     font-style: italic;
+    font-size: 1.5rem;
+    margin-bottom: 1rem; /* Espaciado entre la cita y el texto */
+    color: #fff; /* Color más claro para resaltar */
 }
 
-/* Contenedor principal para dividir imagen y texto */
-.contenedor-identidad {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
-    max-width: 100rem;
-    margin: 0 auto;
-}
 
-/* Contenedor de imagen */
-.identidad-imagen img {
-    width: 100%;
-    max-width: 45rem;
-    border-radius: 1rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-/* Contenedor de la paleta de colores y texto */
-.identidad-paleta {
-    max-width: 50%;
-    text-align: center;
-}
-
-/* Paleta de colores */
-.paleta-colores {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    margin: 2rem 0;
-}
-
-/* Estilos de los cuadrados de color */
-.color {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.color-cuadro {
-    width: 80px;
-    height: 80px;
-    border-radius: 10px; /* Bordes redondeados */
-    margin-bottom: 0.5rem;
-    box-shadow: 4px 4px 4px 4px rgba(255, 255, 255, 255);
-}
-
-/* Texto debajo de cada color */
-.color p {
-    font-size: 1rem;
-    font-weight: 400;
-    color: #fff;
-    margin: 0;
-}
-
-/* Descripción de la paleta de colores */
-.descripcion-paleta {
-    font-size: 1rem;
-    line-height: 1.8;
-    color: #fff;
-    margin-top: 2rem;
-    text-align: justify;
-}
 
 
 /* Estilos para el footer */

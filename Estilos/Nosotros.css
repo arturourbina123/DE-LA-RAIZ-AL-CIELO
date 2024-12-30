@@ -1,0 +1,221 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box; /* Asegura que padding y bordes estén incluidos en el ancho */
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit; /* Consistencia en todo el documento */
+}
+
+/* Estilos del header */
+header {
+    background-color: white;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+}
+
+/* Estilos del logo */
+
+.logo {
+    max-height: 50px; /* Restricción de la altura */
+    object-fit: contain;
+}
+
+
+/* Estilos del nombre de la página */
+.nombre-pagina {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #1B2020;
+}
+
+/* Separador vertical */
+.separator {
+    width: 1px;
+    height: 40px;
+    background-color: #1B2020;
+    margin: 0 15px;
+}
+
+/* Estilos del menú */
+.navbar-nav .nav-link {
+    color: #1B2020 !important;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #1B2020;
+    text-decoration: underline;
+}
+
+.contenedor, .contenedor-fluid {
+    width: 100%; /* Usar todo el ancho disponible */
+    max-width: 10rem; /* Ancho máximo ajustado */
+    padding: 0 1rem; /* Espaciado interno lateral */
+    margin: 0 auto; /* Centrado horizontal */
+}
+
+
+.filosofia {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+/* Estilos del título */
+.filosofia h1 {
+    font-size: 3rem; /* Tamaño del título */
+    font-weight: 600; /* Mayor énfasis */
+    color: #1B2020; /* Consistencia con el header */
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Estilos del texto */
+.filosofia p {
+    font-size: 1.3rem; /* Tamaño del texto */
+    line-height: 1.8;
+    color: #333; /* Texto más suave para buena lectura */
+    margin: 0 auto;
+    max-width: 100rem; /* Limitar ancho para mejor legibilidad */
+    font-weight: 400; /* Ligero para equilibrio con el título */
+    text-align: center; /* Mejor alineación en texto largo */
+}
+
+.filosofia h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #1B2020;
+    margin-bottom: 2rem;
+}
+
+
+/* Ajuste para igualar la altura de las tarjetas */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 15px;
+}
+
+/* Para garantizar que el texto crezca o se contraiga según sea necesario */
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-text {
+    flex-grow: 1; /* Asegura que el texto ocupe espacio de manera uniforme */
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* Asegura que las tarjetas tengan altura uniforme */
+.mision-vision .card {
+    height: 100%; /* Las tarjetas ocuparán el mismo espacio */
+}
+
+
+.card-title {
+    font-weight: bold;
+    color: #096D6B;
+}
+
+
+.card2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 15px;
+}
+
+/* Para garantizar que el texto crezca o se contraiga según sea necesario */
+.card2-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.card2-title {
+    font-weight: bold;
+    color: #615E30
+}
+
+
+.card2-text {
+    flex-grow: 1; /* Asegura que el texto ocupe espacio de manera uniforme */
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.valores .card2 img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.valor-icono {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px; /* Ajusta la altura máxima para un tamaño proporcional */
+    margin-bottom: 1rem;
+}
+
+.valor-icono img {
+    max-width: 100%; /* La imagen no excederá el ancho disponible */
+    max-height: 100%; /* La imagen no excederá la altura establecida */
+    object-fit: contain; /* Mantiene las proporciones sin deformar la imagen */
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #1B2020;
+    color: white;
+}
+
+/* Contenedor del footer */
+.footer-content {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+/* Alineación de los elementos en el footer */
+footer p, .contacto {
+    font-size: 1rem;
+}
+
+.contacto {
+    display: flex;
+    align-items: center;
+}
+
+/* Espaciado entre los íconos y el texto */
+.contacto a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.contacto img.social-icon {
+    width: 30px; /* Ajusta el tamaño del ícono */
+    height: auto;
+    margin-right: 0.5rem; /* Espacio entre el ícono y el texto */
+}
+
+/* Cambio de color al pasar el mouse por encima */
+.contacto a:hover {
+    color: #C09F23; /* Color dorado al pasar el mouse */
+}
+
+/* Espaciado entre el texto de contacto */
+.contacto span {
+    font-size: 1rem;
+}
