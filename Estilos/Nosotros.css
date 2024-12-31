@@ -77,8 +77,8 @@ header {
 
 /* Estilos del texto */
 .filosofia p {
-    font-size: 1.3rem; /* Tamaño del texto */
-    line-height: 1.8;
+    font-size: 1.5rem; /* Tamaño del texto */
+    line-height: 1.5;
     color: #333; /* Texto más suave para buena lectura */
     margin: 0 auto;
     max-width: 100rem; /* Limitar ancho para mejor legibilidad */
@@ -87,6 +87,38 @@ header {
 }
 
 .filosofia h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #1B2020;
+    margin-bottom: 2rem;
+}
+
+.filosofia2 {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+/* Estilos del título */
+.filosofia2 h1 {
+    font-size: 3rem; /* Tamaño del título */
+    font-weight: 600; /* Mayor énfasis */
+    color: #1B2020; /* Consistencia con el header */
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Estilos del texto */
+.filosofia2 p {
+    font-size: 1rem; /* Tamaño del texto */
+    line-height: 1.5;
+    color: #333; /* Texto más suave para buena lectura */
+    margin: 0 auto;
+    max-width: 100rem; /* Limitar ancho para mejor legibilidad */
+    font-weight: 400; /* Ligero para equilibrio con el título */
+    text-align: center; /* Mejor alineación en texto largo */
+}
+
+.filosofia2 h2 {
     font-size: 2.5rem;
     font-weight: 600;
     color: #1B2020;

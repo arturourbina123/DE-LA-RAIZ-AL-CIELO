@@ -63,11 +63,10 @@ header {
 }
 
 .introduccion h1 {
-    font-size: 3rem; /* Tamaño del título */
-    font-weight: 600; /* Mayor énfasis */
-    color: #1B2020; /* Consistencia con el header */
+    font-size: 3rem;
+    font-weight: 600;
+    color: #1B2020;
     margin-bottom: 2rem;
-    text-align: center;
 }
 
 .content-container {

@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>De la raíz al cielo</title>
-    <!-- Enlace a Bootstrap CSS local -->
+    <!-- Enlace a Bootstrap CSS -->
     <link href="bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Enlace al CSS personalizado -->
-    <link rel="stylesheet" href="Estilos/Informacion.css">
+    <!-- Enlace al archivo CSS correcto -->
+    <link rel="stylesheet" href="/Estilos/Informacion.css">
 </head>
+
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid"> <!-- Cambié container por container-fluid -->
                 <a class="navbar-brand d-flex align-items-center" href="#">
-                    <img src="Recursos/LOGO.jpeg" alt="Logo" class="logo img-fluid">
+                    <img src="Recursos/LOGO.jpeg" alt="Logo" class="logo">
                     <span class="ms-2 nombre-pagina">De la raíz al cielo</span>
                 </a>            
                 <div class="separator"></div>
@@ -44,16 +45,36 @@
     <main class="container-fluid">
         <section class="introduccion">
             <h1>¡Descubre la magia de Nanacamilpa!</h1>
-            <p>
-                Embárcate en una aventura inolvidable desde la Ciudad de México y sumérgete en la belleza
-                natural de Nanacamilpa, el santuario de las luciérnagas más grande de América.
-                Todos los fines de semana en la temporada que va desde mediados de junio hasta mediados
-                de agosto.
-                O disfrutar de una experiencia inmersiva de realidad virtual fuera de la temporada.
-            </p>
+            <div class="contenedor-tarjetas">
+                <!-- Tarjeta 1 -->
+                <div class="tarjeta">
+                    <img src="Recursos/viaje.jpg" alt="Belleza de Nanacamilpa" class="tarjeta-img">
+                    <div class="tarjeta-contenido">
+                        <h2>Aventura desde la CDMX.</h2>
+                        <p>Embárcate en una aventura inolvidable desde la Ciudad de México y sumérgete en la belleza natural de Nanacamilpa, el santuario de las luciérnagas más grande de América.</p>
+                    </div>
+                </div>
+                <!-- Tarjeta 2 -->
+                <div class="tarjeta">
+                    <img src="Recursos/luci.jpg" alt="Temporada de luciérnagas" class="tarjeta-img">
+                    <div class="tarjeta-contenido">
+                        <h2>Temporada de luciérnagas.</h2>
+                        <p>Todos los fines de semana, desde mediados de junio hasta mediados de agosto, 
+                            serás testigo de un espectáculo de luces naturales que te dejará sin aliento.</p>
+                    </div>
+                </div>
+                <!-- Tarjeta 3 -->
+                <div class="tarjeta">
+                    <img src="Recursos/virtual.jpg" alt="Realidad Virtual" class="tarjeta-img">
+                    <div class="tarjeta-contenido">
+                        <h2>Experiencia inmersiva.</h2>
+                        <p>Si prefieres una experiencia fuera de temporada, disfruta de nuestra inmersiva realidad virtual, 
+                            que te transportará a este mágico mundo bioluminiscente en cualquier momento del año.</p>
+                    </div>
+                </div>
+            </div>
         </section>
-        <img src="Recursos/nanacamilpa1.jpeg" alt="Nanacamilpa" class="img-fluid">
-
+        
         <section class="carousel-container">
             <h2>¿Qué incluye esta experiencia única?</h2>
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">

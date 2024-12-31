@@ -44,6 +44,7 @@ header {
     text-decoration: underline;
 }
 
+
 /* Estilos de la introducción */
 .introduccion {
     text-align: center;
@@ -52,65 +53,94 @@ header {
 }
 
 .introduccion h1 {
-    font-size: 3rem;
-    font-weight: 600;
+    font-size: 3.5rem; /* Tamaño más grande para mayor impacto */
+    font-weight: 700; /* Fuente más gruesa */
     color: #1B2020;
     margin-bottom: 2rem;
 }
 
-/* Añadimos más espacio debajo del h2 */
 .introduccion h2 {
     font-size: 2rem;
     font-weight: 400;
-    margin-bottom: 3rem;  /* Aumentamos el margen para dar más espacio */
+    margin-bottom: 3rem;
     font-style: italic;
+    color: #333; /* Color acentuado */
 }
 
-/* Añadimos más espacio debajo del h3 */
-.introduccion h3 {
-    font-size: 1rem;
-    font-weight: 400;
-    margin-top: 3rem;  /* Aumentamos el margen superior para dar espacio antes del h3 */
-    margin-bottom: 2rem;
-    font-style: italic;
-}
-
-.introduccion p {
-    font-size: 1rem;
-    line-height: 1.8;
-    color: #1B2020;
-    margin: 0 auto;
-    max-width: 90rem;
-    font-weight: 400;
-    text-align: center;
-}
-
-/* Estilo de los textos resaltados fuera del contenedor */
+/* Resaltado de párrafos clave */
 .highlighted-text {
-    font-size: 1.2rem;
+    font-size: 1.3rem; /* Tamaño mayor */
     font-weight: 600;
+    color: #1B2020;
+    background-color: #F8E8C1; /* Fondo suave */
+    padding: 0.5rem;
+    border-radius: 8px; /* Bordes redondeados */
+    display: flex; /* Flex para alinear contenido */
+    justify-content: center; /* Centrar contenido */
+    align-items: center; /* Centrar contenido */
+    margin-bottom: 2rem;
+}
+
+/* Contenedor de información */
+.info-container {
+    background-color: #E4D6AE;
+    padding: 2rem; /* Mayor espacio interno */
+    border-radius: 15px;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15); /* Sombra más definida */
+    max-width: 1600px;
+    margin: 0 auto;
+    text-align: center; /* Centrado general */
+}
+
+.info-container p {
+    font-size: 1rem; /* Mayor tamaño de fuente */
+    line-height: 1.5;
     color: #1B2020;
     margin-bottom: 1.5rem;
 }
 
-/* Contenedor con bordes curvos */
-.info-container {
-    background-color: #E4D6AE; /* Fondo claro para resaltar */
-    padding: 1rem;
-    border-radius: 15px; /* Bordes curvos */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    max-width: 1200px;
-    margin: 0 auto; /* Centrado horizontal */
-    text-align: left; /* Alinear texto a la izquierda */
+/* Estilos de filas y columnas */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
 }
 
-/* Ajuste del tamaño de los párrafos dentro del contenedor */
-.info-container p {
-    font-size: 1.1rem;
-    color: #1B2020;
-    line-height: 1.7;
-    margin-bottom: 1.5rem; /* Espaciado entre párrafos */
+.col-md-6 {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    display: flex;
+    align-items: stretch; /* Asegura que las columnas ocupen la misma altura */
 }
+
+@media (min-width: 900px) {
+    .col-md-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 900px) {
+    .order-md-1 {
+        order: 1;
+    }
+
+    .order-md-2 {
+        order: 2;
+    }
+}
+
+/* Ajustes para la altura dinámica de las imágenes */
+.img-fluid2 {
+    width: 100%;
+    max-height: 300px; /* La imagen tomará la altura completa del contenedor */
+    object-fit: cover; /* Ajusta la imagen sin deformarla, cubriendo el contenedor */
+}
+
+
 
 
 
@@ -126,13 +156,8 @@ header {
     margin-bottom: 20px;
 }
 
-/* Descripción debajo del mapa */
-.description {
-    font-size: 1.2em;
-    padding: 10px;
-}
 
-/* Estilos generales para la nueva sección */
+
 /* Estilos generales para la nueva sección */
 .duracion {
     text-align: center;
@@ -145,14 +170,26 @@ header {
     color: #1B2020;
     margin-bottom: 2rem;
 }
+/* Estilo actualizado para la descripción de duración */
+.descripcion-duracion p {
+    font-size: 1.5rem; /* Tamaño del texto */
+    line-height: 1.5; /* Mayor espacio entre líneas */
+    color: #333; /* Texto más suave para buena lectura */
+    margin: 0 auto 2rem auto; /* Espacio entre párrafos */
+    max-width: 100rem; /* Limitar ancho para mejor legibilidad */
+    font-weight: 400; /* Ligero para equilibrio con el título */
+    text-align: justify; /* Mejor alineación en texto largo */
+}
 
 /* Contenedor de las tarjetas de fechas */
 .fechas-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;  /* Espacio entre las tarjetas */
-    margin-bottom: 2rem;  /* Espacio entre las tarjetas y el texto adicional */
+    flex-wrap: nowrap; /* Evita el salto de línea */
+    justify-content: space-between; /* Distribuye las tarjetas uniformemente */
+    gap: 1rem; /* Espacio reducido entre las tarjetas */
+    margin-bottom: 2rem; /* Espacio entre las tarjetas y el texto adicional */
+    overflow-x: auto; /* Permite desplazamiento horizontal si es necesario */
+    padding: 0 1rem; /* Espacio horizontal para evitar cortes en bordes */
 }
 
 /* Estilos de las tarjetas de fechas */
@@ -161,12 +198,13 @@ header {
     padding: 1rem;
     border-radius: 10px; /* Bordes redondeados */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    width: 200px;
+    width: 12rem; /* Ajusta el ancho para que entren todas */
     text-align: center;
     font-size: 1.1rem;
     font-weight: bold;
     color: #1B2020;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+   
 }
 
 .fecha-card:hover {
@@ -174,18 +212,9 @@ header {
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
 }
 
-/* Estilos para el texto adicional debajo de las tarjetas */
-.descripcion-duracion p {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #1B2020;
-    margin: 0 auto;
-    max-width: 100rem;
-    font-weight: 400;
-    text-align: justify;
-}
 
-/* Estilos para la sección de itinerario */
+
+/* Ajustes para la sección de itinerario */
 .itinerario {
     text-align: center;
     margin: 3rem 0;
@@ -198,7 +227,7 @@ header {
     margin-bottom: 2rem;
 }
 
-/* Contenedor principal para días */
+/* Contenedor principal para los días */
 .itinerario-container {
     display: flex;
     flex-wrap: wrap;
@@ -206,11 +235,11 @@ header {
     justify-content: center;
 }
 
-/* Estilo para cada día */
+/* Ajuste del contenedor para cada día */
 .dia {
-    flex: 1;
-    max-width: 500px;
-    padding: 1.5rem;
+    flex: 1 1 45%; /* Ajusta el tamaño relativo para cada columna */
+    max-width: 600px;
+    padding: 2rem;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     color: white;
@@ -231,44 +260,7 @@ header {
     text-align: center;
 }
 
-/* Lista de actividades */
-.dia ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: left;
-}
-
-.dia ul li {
-    font-size: 1rem;
-    line-height: 1.7;
-    margin-bottom: 0.8rem;
-    display: flex;
-    align-items: flex-start;
-    gap: 0.5rem;
-}
-
-/* Opcional: Icono o marcador */
-.dia ul li::before {
-    content: "•";
-    color: white;
-    font-size: 1.2rem;
-    margin-right: 0.5rem;
-}
-
-/* Mantén los estilos anteriores y añade los siguientes */
-
-/* Ajusta el contenedor de cada día */
-.dia {
-    flex: 1;
-    max-width: 600px; /* Ajusta el tamaño para hacerlo más largo */
-    padding: 2rem; /* Más espacio interno */
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    color: white;
-}
-
-/* Estilo para cada actividad */
+/* Contenedor para actividades */
 .actividad {
     display: flex;
     align-items: center;
@@ -288,7 +280,8 @@ header {
 
 /* Imagen dentro de cada actividad */
 .actividad img {
-    width: 40%; /* Ajusta el tamaño de la imagen proporcionalmente */
+    width: 40%;
+    height: 150px;
     border-radius: 8px;
     object-fit: cover;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
@@ -303,6 +296,105 @@ header {
     text-align: justify;
 }
 
+/* Sección de mapas */
+.mapas {
+    margin: 3rem auto;
+    text-align: center;
+}
+
+
+
+.mapas h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #1B2020;
+    margin-bottom: 2rem;
+}
+
+.mapas-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.mapa {
+    flex: 1 1 45%; /* Permite que las imágenes sean del mismo tamaño y se ajusten */
+    text-align: center;
+    max-width: 800px;
+}
+
+.mapa img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para las imágenes */
+}
+
+.mapa p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+
+/* Sección de lugares, actividades y servicios */
+.lugares-actividades-servicios {
+    margin: 4rem auto;
+    text-align: center;
+}
+
+.lugares-actividades-servicios h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #1B2020;
+    margin-bottom: 3rem;
+}
+
+/* Contenedor de tarjetas */
+.tarjetas-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+/* Tarjetas individuales */
+.tarjeta {
+    flex: 1 1 30%;
+    max-width: 400px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: justify;
+}
+
+.tarjeta h3 {
+    font-size: 1.8rem;
+    color: #1B2020;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Imágenes dentro de las tarjetas */
+.tarjeta img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Párrafos dentro de las tarjetas */
+.tarjeta p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
 
 
 

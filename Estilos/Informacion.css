@@ -53,6 +53,28 @@ header {
     text-decoration: underline;
 }
 
+/* Responsivo */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+    }
+
+    .text-container, .image-container {
+        flex: 0 0 100%;
+    }
+
+    .image-container img {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Para reducir los márgenes laterales de todo el contenido */
+.container {
+    max-width: 90%;
+    padding: 0 1rem;
+}
+
+
 .contenedor, .contenedor-fluid {
     width: 100%; /* Usar todo el ancho disponible */
     max-width: 10rem; /* Ancho máximo ajustado */
@@ -63,9 +85,8 @@ header {
 
 /* Sección de introducción */
 .introduccion {
+    margin: 3rem 0;
     text-align: center;
-    margin: 4rem 0;
-    padding: 0 2rem;
 }
 
 .introduccion h1 {
@@ -76,14 +97,71 @@ header {
 }
 
 .introduccion p {
-    font-size: 1.3rem; /* Tamaño del texto */
-    line-height: 1.8;
+    font-size: 1.5rem; /* Tamaño del texto */
+    line-height: 1.5;
     color: #333; /* Texto más suave para buena lectura */
     margin: 0 auto;
-    max-width: 80rem; /* Limitar ancho para mejor legibilidad */
+    max-width: 100rem; /* Limitar ancho para mejor legibilidad */
     font-weight: 400; /* Ligero para equilibrio con el título */
     text-align: center; /* Mejor alineación en texto largo */
 }
+
+
+
+
+/* Contenedor de tarjetas */
+.contenedor-tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+/* Tarjetas */
+.tarjeta {
+    background-color: #f9f9f9; /* Fondo suave */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Imágenes de las tarjetas */
+.tarjeta-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Contenido de las tarjetas */
+.tarjeta-contenido {
+    padding: 1rem;
+}
+
+.tarjeta-contenido h2 {
+    font-size: 1.5rem;
+    color: #1B2020;
+    margin-bottom: 1rem;
+}
+
+.tarjeta-contenido p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333; /* Texto más suave para buena lectura */
+    margin: 0 auto;
+    max-width: 100rem; /* Limitar ancho para mejor legibilidad */
+    font-weight: 400; /* Ligero para equilibrio con el título */
+    text-align: center; /* Mejor alineación en texto largo */
+}
+
 
 
 /* Imagen más grande y centrada */
@@ -100,7 +178,7 @@ header {
 /* Estilos para la sección del carrusel */
 /* General */
 .carousel-container h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 600;
     color: #1B2020;
     margin-bottom: 2rem;
@@ -155,7 +233,14 @@ header {
 }
 
 .why-choose h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #1B2020;
+    margin-bottom: 2rem;
+}
+
+.why-choose h3 {
+    font-size: 2rem;
     font-weight: 600;
     color: #1B2020;
     margin-bottom: 2rem;
@@ -173,7 +258,7 @@ header {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    max-width: 1000px;
+    max-width: 1800px;
 }
 
 .why-choose .content-container:nth-child(odd) {
@@ -186,34 +271,26 @@ header {
 
 .why-choose .content-container img {
     width: 48%; /* Asegura que las imágenes tengan el mismo ancho */
-    height: auto;
+    height: 350px;
     object-fit: cover;
-    margin-right: 1rem; /* Asegura un pequeño margen entre la imagen y el texto */
+    margin-right: 2rem; /* Asegura un pequeño margen entre la imagen y el texto */
 }
 
 .why-choose .content-container .text {
-    width: 48%;  /* El texto tiene un ancho fijo */
+    width: 60%;  /* El texto tiene un ancho fijo */
     text-align: left;
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 1.5rem;
+    line-height: 1.5;
     color: #333;
+
+   
+  
+    margin: 0 auto;
+    max-width: 100rem; /* Limitar ancho para mejor legibilidad */
+    font-weight: 400; /* Ligero para equilibrio con el título */
+   
 }
 
-/* Responsividad */
-@media (max-width: 768px) {
-    .why-choose .content-container {
-        flex-direction: column;  /* Para pantallas pequeñas, las imágenes y el texto estarán uno encima del otro */
-        text-align: center;
-    }
-
-    .why-choose .content-container img {
-        width: 80%;  /* Las imágenes ocuparán el 80% en móviles */
-    }
-
-    .why-choose .content-container .text {
-        width: 80%;  /* El texto ocupará el 80% en móviles */
-    }
-}
 
 
 
